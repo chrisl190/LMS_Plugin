@@ -1,0 +1,15 @@
+Moodle or Totara Version: <version>
+Plugin Version: <version>
+Plugin Branch:
+Reproducible: yes/no
+
+Steps to reproduce:
+
+The expected outcome was:
+
+The actual outcome was:
+
+
+________________________________________________
+
+New Features ideas:

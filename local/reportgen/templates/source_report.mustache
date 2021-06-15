@@ -1,0 +1,250 @@
+{{!
+    @product Report Generator plugin
+    @template reportgen/source_report.mustache
+
+    Example context (json):
+    {
+        "coursebackup": true,
+        "data": [
+        {
+            "title": "Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci."
+            "summary": "Praesent nec nisl a purus blandit viverra."
+            "days of backup": "Pellentesque ut neque."
+            "time of execution": "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
+            "storage": "Praesent egestas tristique nibh."
+            "saves to": "Sed in libero ut nibh placerat accumsan."
+        }
+        ]
+    }
+}}
+
+{{#data.authenticationdetails}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}authenabled, local_reportgen{{/str}}</p>
+        </div>
+        <div class="badge mb-0">
+            {{data.authenticationdetails}}
+        </div>
+    </div>
+    <hr>
+{{/data.authenticationdetails}}
+
+{{#data.coursebackup}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            {{data.coursebackup}}
+        </div>
+
+            {{#data.coursebackupsday}}
+            <p>{{#str}}daysofweek, local_reportgen{{/str}}</p>
+            <div class="badge mb-0">
+                {{data.coursebackupsday}} </div>
+        {{/data.coursebackupsday}}
+
+        {{#data.coursebackupshour}}
+            <p>{{#str}}executes, local_reportgen{{/str}}</p>
+            <div class="badge mb-0">
+                {{data.coursebackupshour}}:{{data.coursebackupsmin}}
+            </div>
+        {{/data.coursebackupshour}}
+
+        {{#data.coursebackupsstorage}}
+            <p>{{#str}}backupstorage, local_reportgen{{/str}}</p>
+            <div class="badge mb-0">
+                {{data.coursebackupsstorage}}
+            </div>
+        {{/data.coursebackupsstorage}}
+
+        {{#data.coursebackupslocation}}
+            <p>{{#str}}saves, local_reportgen{{/str}}</p>
+            <div class="badge mb-0">
+                {{data.coursebackupslocation}}
+            </div>
+        {{/data.coursebackupslocation}}
+    </div>
+    <hr>
+{{/data.coursebackup}}
+
+{{#data.cachedetails}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}cachelocation, local_reportgen{{/str}}</p>
+        </div>
+        <div class="badge mb-0">
+            {{data.cachedetails}}
+        </div>
+    </div>
+    <hr>
+{{/data.cachedetails}}
+
+{{#data.numberofcourses}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}cdetails, local_reportgen{{/str}}</p>
+        </div>
+        <p>{{#str}}nocourses, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.numberofcourses}}
+        </div>
+        <p>{{#str}}coursecategories, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.categories}}
+        </div>
+        <p>{{#str}}popularcourse, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.popularcourse}}
+        </div>
+    </div>
+    <hr>
+{{/data.numberofcourses}}
+
+{{#data.dbname}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}dbconfig, local_reportgen{{/str}}</p>
+        </div>
+        <p>{{#str}}dbname, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dbname}}
+        </div>
+        <p>{{#str}}dbsize, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dbsize}}
+        </div>
+        <p>{{#str}}dbtype, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dbtype}}
+        </div>
+        <p>{{#str}}dbhost, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dbhost}}
+        </div>
+        <p>{{#str}}dblibrary, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dblibrary}}
+        </div>
+        <p>{{#str}}dbfiledir, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.filedirusage}}
+        </div>
+    </div>
+    <hr>
+{{/data.dbname}}
+
+{{#data.dbcollation}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}dbcollationdescript, local_reportgen{{/str}}</p>
+        </div>
+        <div class="badge mb-0">
+            {{data.dbcollation}}
+        </div>
+    </div>
+    <hr>
+{{/data.dbcollation}}
+
+{{#data.domainname}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}domaindescript, local_reportgen{{/str}}</p>
+        </div>
+        <p>{{#str}}domianname, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.domainname}}
+        </div>
+        <p>{{#str}}url, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.url}}
+        </div>
+    </div>
+    <hr>
+{{/data.domainname}}
+
+{{#data.wwwroot}}
+    <div>
+        <h4>{{source}}</h4>
+        <p>{{#str}}weblocation, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.wwwroot}}
+        </div>
+        <p>{{#str}}datafileslocation, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.dataroot}}
+        </div>
+    </div>
+    <hr>
+{{/data.wwwroot}}
+
+{{#data.globalsearch}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}globalsearchdetails, local_reportgen{{/str}}</p>
+        </div>
+        <div class="badge mb-0">
+            {{data.globalsearch}}
+        </div>
+    </div>
+    <hr>
+{{/data.globalsearch}}
+
+{{#data.themedetails}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}themedetails, local_reportgen{{/str}}</p>
+        </div>
+        <div class="badge mb-0">
+            {{data.themedetails}}
+        </div>
+    </div>
+    <hr>
+{{/data.themedetails}}
+
+{{#data.totalusers}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}userdescript, local_reportgen{{/str}}</p>
+        </div>
+        <p>{{#str}}totalusers, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.totalusers}}
+        </div>
+        <p>{{#str}}activeusers, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.activeusers}}
+        </div>
+        <p>{{#str}}neverloggedin, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.nologinusers}}
+        </div>
+    </div>
+    <hr>
+{{/data.totalusers}}
+
+{{#data.version}}
+    <div>
+        <h4>{{source}}</h4>
+        <div class="text-muted mb-2">
+            <p>{{#str}}versiondescript, local_reportgen{{/str}}</p>
+        </div>
+        <p>{{#str}}versionno, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.version}}
+        </div>
+        <p>{{#str}}versionrelease, local_reportgen{{/str}}</p>
+        <div class="badge mb-0">
+            {{data.release}}
+        </div>
+    </div>
+    <hr>
+{{/data.version}}

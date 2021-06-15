@@ -1,0 +1,27 @@
+.path-local-reportgen .fontUploaded {
+    background-color: #FFFFFF;
+    border: 1px solid #038CFC;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.path-local-reportgen .fontUploaded p {
+    color: #2e2b2b;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.path-local-reportgen .fontLocation {
+    background-color: #D9EDF7;
+    border: 1px solid #BCE8F1;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.path-local-reportgen .fontLocation p {
+    color: #3A87AD;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}

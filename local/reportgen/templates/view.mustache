@@ -1,0 +1,20 @@
+{{!
+    @product Report Generator plugin
+    @template reportgen/view.mustache
+
+    This template contains the bootstrap used for every source that is being printed.
+
+    Example context (json):
+    {}
+}}
+<div style="text-align: center;">
+    <h1>{{#str}}report, local_reportgen{{/str}}</h1>
+</div>
+{{#sourcesHTML}}
+    <div class="row px-3 flex-column">
+        <div class="col-12">
+            {{{sourceHTML}}}
+        </div>
+    </div>
+{{/sourcesHTML}}
+
