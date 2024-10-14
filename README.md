@@ -1,2 +1,2 @@
 # LMS_Plugins
-Final year plugins written for Synergy Learning
+Plugin written for Synergy Learning
